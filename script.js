@@ -272,3 +272,18 @@ function renderAll() {
 
 // Initial load
 renderAll();
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+    const { error } = await supabaseClient.auth.signOut();
+
+    if (error) {
+      alert("Gagal logout: " + error.message);
+      return;
+    }
+
+    window.location.replace("./auth.html");
+  });
+}

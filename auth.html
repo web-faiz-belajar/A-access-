@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Access - Authentication</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <main class="auth-container">
+    <h1>A ACCESS</h1>
+    <p>Secure Device Management</p>
+
+    <div class="auth-card">
+      <h2 id="authTitle">Masuk ke akun</h2>
+
+      <form id="authForm">
+        <input
+          type="email"
+          id="email"
+          placeholder="Alamat email"
+          required
+        >
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          minlength="8"
+          required
+        >
+
+        <button type="submit" id="authButton">
+          Masuk
+        </button>
+      </form>
+
+      <p id="authMessage"></p>
+
+      <button type="button" id="toggleAuth">
+        Belum punya akun? Daftar
+      </button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase.js"></script>
+  <script src="./auth.js"></script>
+
+</body>
+</html>

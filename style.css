@@ -497,3 +497,112 @@ button {
     align-items: flex-start;
   }
 }
+
+
+/* ===== A ACCESS AUTHENTICATION ===== */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, #253b83 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, #40216c 0%, transparent 40%),
+    #070b16;
+  color: #fff;
+}
+
+.auth-container > h1 {
+  font-size: 32px;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #7da5ff, #bd8cff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-container > p {
+  color: #929db8;
+  margin-bottom: 30px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 410px;
+  padding: 32px 25px;
+  border: 1px solid rgba(145, 165, 255, .2);
+  border-radius: 24px;
+  background: rgba(19, 27, 49, .78);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .4);
+}
+
+.auth-card h2 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #303c5b;
+  outline: none;
+  background: #10182b;
+  color: white;
+  font-size: 15px;
+}
+
+.auth-card input:focus {
+  border-color: #8295ff;
+  box-shadow: 0 0 0 3px rgba(130, 149, 255, .12);
+}
+
+.auth-card button[type="submit"] {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #5267e8, #9063e9);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.auth-card button[type="submit"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+#toggleAuth {
+  display: block;
+  margin: 22px auto 0;
+  border: none;
+  background: transparent;
+  color: #9eafff;
+  cursor: pointer;
+}
+
+#authMessage {
+  color: #a9baff;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  margin-top: 15px;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 27px 20px;
+  }
+}
